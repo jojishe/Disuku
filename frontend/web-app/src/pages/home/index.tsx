@@ -1,7 +1,8 @@
 import reactLogo from "@assets/react.svg";
 import viteLogo from "/vite.svg";
 import useBearStore from "@store/useBearStore";
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./index.css";
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
   const increasePopulation = useBearStore((state) => state.increasePopulation);
   return (
     <>
+      <Analytics />
+      <SpeedInsights />
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
