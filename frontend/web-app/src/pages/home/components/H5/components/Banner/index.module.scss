@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+  font-size: 84px;
+  background-color: #262626;
+  text-decoration: none;
+  .title {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+    background: url(https://vignette.wikia.nocookie.net/jojo/images/2/21/KQ_Bites_the_Dust.gif/revision/latest/scale-to-width-down/340?cb=20180501192918&path-prefix=ru)
+      repeat-x;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: contain;
+    animation: Jojo 10s linear infinite;
+  }
+}
+
+@keyframes Jojo {
+  0% {
+    background-position: left 0 top 25px;
+  }
+
+  50% {
+    background-position: left 130px top -35px;
+  }
+
+  100% {
+    background-position: left 260px top 0;
+  }
+}

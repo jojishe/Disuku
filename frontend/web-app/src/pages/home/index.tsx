@@ -1,35 +1,12 @@
-import reactLogo from "@assets/react.svg";
-import viteLogo from "/vite.svg";
-import useBearStore from "@store/useBearStore";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
-import "./index.css";
+import React from "react";
+import H5 from "./components/H5";
 
-function App() {
-  const bears = useBearStore((state) => state.bears);
-  const increasePopulation = useBearStore((state) => state.increasePopulation);
+const Home = () => {
   return (
     <>
-      <Analytics />
-      <SpeedInsights />
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + TypeScirpt + ESlint + Prettier + SWC 1111</h1>
-      <div className="card">
-        <button onClick={() => increasePopulation()}>count is {bears}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <H5 />
     </>
   );
-}
+};
 
-export default App;
+export default React.memo(Home);
