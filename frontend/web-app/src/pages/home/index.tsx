@@ -2,7 +2,7 @@ import reactLogo from "@assets/react.svg";
 import viteLogo from "/vite.svg";
 import useBearStore from "@store/useBearStore";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/dist/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./index.css";
 
 function App() {
