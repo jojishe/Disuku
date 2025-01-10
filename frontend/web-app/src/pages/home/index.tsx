@@ -17,7 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + TypeScirpt + ESlint + Prettier + SWC</h1>
+      <h1>Vite + React + TypeScirpt + ESlint + Prettier + SWC 1111</h1>
       <div className="card">
         <button onClick={() => increasePopulation()}>count is {bears}</button>
         <p>
