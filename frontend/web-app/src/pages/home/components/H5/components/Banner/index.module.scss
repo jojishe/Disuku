@@ -1,12 +1,15 @@
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
   font-family: Arial;
   font-size: 84px;
   background-color: #262626;
+  text-decoration: none;
   .title {
     text-transform: uppercase;
-    margin: 200px auto 0 auto;
     text-align: center;
     color: rgba(255, 255, 255, 0.2);
     background: url(https://vignette.wikia.nocookie.net/jojo/images/2/21/KQ_Bites_the_Dust.gif/revision/latest/scale-to-width-down/340?cb=20180501192918&path-prefix=ru)
