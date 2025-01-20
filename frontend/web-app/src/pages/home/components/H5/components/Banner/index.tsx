@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./index.module.scss";
+import { QM_URL } from "@src/constant";
 const Banner = () => {
   return (
-    <a href="https://qm.qq.com/q/mAjztLgZmE" className={styles.wrapper}>
-      <h4 className={styles.title}>jojishe</h4>
+    <a href={QM_URL} className={styles.wrapper}>
+      <h4 className={styles.title}>joji she</h4>
     </a>
   );
 };
