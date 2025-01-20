@@ -1,32 +1,32 @@
 import React from "react";
 import { Carousel } from "antd";
 import Title from "../Title";
+import Jo1 from "@assets/home/jo1.jpg";
+import Jo2 from "@assets/home/jo2.jpg";
+import Jo3 from "@assets/home/jo3.jpg";
+const jojoImgs = [Jo1, Jo2, Jo3];
 const contentStyle: React.CSSProperties = {
-  height: "300px",
+  width: "100%",
+  height: "auto",
   color: "#fff",
   lineHeight: "160px",
   textAlign: "center",
-  background: "#364d79",
+  borderRadius: "8px",
 };
 
-const CarouselCom: React.FC = () => (
-  <>
-    <Title title="Historical" />
-    <Carousel autoplay>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
-    </Carousel>
-  </>
-);
+const CarouselCom: React.FC = () => {
+  return (
+    <>
+      <Title title="Like" />
+      <Carousel autoplay infinite>
+        {jojoImgs.map((item, index) => (
+          <div key={index}>
+            <img src={item} alt="" style={contentStyle} />
+          </div>
+        ))}
+      </Carousel>
+    </>
+  );
+};
 
 export default CarouselCom;

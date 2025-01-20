@@ -5,6 +5,7 @@ const Banner = () => {
   return (
     <a href={QM_URL} className={styles.wrapper}>
       <h4 className={styles.title}>joji she</h4>
+      <button>Join us</button>
     </a>
   );
 };

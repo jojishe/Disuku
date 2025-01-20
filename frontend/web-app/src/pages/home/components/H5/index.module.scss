@@ -4,18 +4,19 @@
   // background-color: #262626;
   background-color: #141414;
   position: relative;
+  overflow: auto;
+
   .content {
-    padding: 0 24px;
+    padding: 0 12px;
     position: relative;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     z-index: 1;
   }
+
   &:before {
-    background: url("https://openres.xfyun.cn/xfyundoc/2025-01-20/351b12e1-4ff2-43a4-86d8-f1a38a8e53c7/1737362678529/bg_pattern_rhombus_line.png")
-      repeat;
+    background: url("https://openres.xfyun.cn/xfyundoc/2025-01-20/351b12e1-4ff2-43a4-86d8-f1a38a8e53c7/1737362678529/bg_pattern_rhombus_line.png") repeat;
     content: "";
     position: absolute;
     top: 0;
