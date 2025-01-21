@@ -1,0 +1,29 @@
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+    .red {
+      color: #e2007f;
+    }
+  }
+
+  .imgs {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+    > img {
+      width: calc(40% - 10px);
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}

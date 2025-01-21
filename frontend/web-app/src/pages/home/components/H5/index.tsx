@@ -1,26 +1,18 @@
 import React, { useEffect } from "react";
-//@ts-ignore
-import WOW from "wow.js";
 import Banner from "./components/Banner";
 import CarouselCom from "./components/CarouselCom";
 import MansonryCom from "./components/MansonryCom";
+import JoinUs from "./components/JoinUs";
+import Footer from "./components/Footer";
 import { Divider } from "antd";
-import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "view-bigimg/lib/view-bigimg.css";
 import styles from "./index.module.scss";
 
 const H5 = () => {
   useEffect(() => {
-    if (WOW) {
-      const wow = new WOW({
-        boxClass: "wow",
-        animateClass: "animate__animated",
-        offset: 0,
-        mobile: true,
-        live: false,
-        scrollContainer: null,
-      });
-      if (wow) wow.init();
-    }
+    AOS.init();
   }, []);
 
   return (
@@ -28,8 +20,12 @@ const H5 = () => {
       <div className={styles.content}>
         <Banner />
         <CarouselCom />
-        <Divider style={{ borderColor: "#e2007f" }} />
+        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
         <MansonryCom />
+        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
+        <JoinUs />
+        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
+        <Footer />
       </div>
     </div>
   );
