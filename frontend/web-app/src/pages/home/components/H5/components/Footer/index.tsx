@@ -15,13 +15,13 @@ const Footer: React.FC = () => {
           </a>
         </p>
       </div>
-      <div className={styles.joFooterLinks}>
+      {/* <div className={styles.joFooterLinks}>
         <a href="/about-us">关于我们</a>
         <span>|</span>
         <a href="/privacy-policy">隐私政策</a>
         <span>|</span>
         <a href="/terms-of-service">服务条款</a>
-      </div>
+      </div> */}
     </footer>
   );
 };

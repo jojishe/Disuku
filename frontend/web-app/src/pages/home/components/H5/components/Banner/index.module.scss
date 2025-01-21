@@ -8,7 +8,7 @@
   // font-family: Arial;
   font-family: "Jacques Francois";
   margin-bottom: 48px;
-  font-size: 50px;
+  font-size: 55px;
   text-decoration: none;
 
   @-webkit-keyframes shiny-btn1 {
@@ -59,7 +59,8 @@
     text-transform: uppercase;
     text-align: center;
     color: rgba(255, 255, 255, 0.2);
-    background: url(https://vignette.wikia.nocookie.net/jojo/images/2/21/KQ_Bites_the_Dust.gif/revision/latest/scale-to-width-down/340?cb=20180501192918&path-prefix=ru) repeat-x;
+    background: url(https://vignette.wikia.nocookie.net/jojo/images/2/21/KQ_Bites_the_Dust.gif/revision/latest/scale-to-width-down/340?cb=20180501192918&path-prefix=ru)
+      repeat-x;
     -webkit-background-clip: text;
     background-clip: text;
     background-size: contain;
@@ -67,7 +68,7 @@
     margin-bottom: 48px;
   }
 
-  >button {
+  > button {
     font-size: 16px;
     min-width: 130px;
     height: 40px;
@@ -80,16 +81,18 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    box-shadow:
+      inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     outline: none;
     background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
     overflow: hidden;
     border: none;
 
     &::before {
-
       position: absolute;
-      content: '';
+      content: "";
       display: inline-block;
       top: -180px;
       left: 0;
