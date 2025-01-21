@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "antd";
 import Title from "../Title";
 import viewer from "@src/utils/viewer";
+import FadeUp from "@src/components/FadeUp";
+import styles from "./index.module.scss";
 
 const jojoImgs = [
   "https://openres.xfyun.cn/xfyundoc/2025-01-21/f9e76ecb-bd15-41e1-b5b9-bb89c9409d8e/1737451413158/jo1.jpg",
@@ -25,16 +27,18 @@ const contentStyle: React.CSSProperties = {
 
 const CarouselCom: React.FC = () => {
   return (
-    <>
-      <Title title="Like" />
-      <Carousel autoplay infinite>
-        {jojoImgs.map((item, index) => (
-          <div key={index}>
-            <img src={item} alt="" style={contentStyle} onClick={() => viewer.show(item)} />
-          </div>
-        ))}
-      </Carousel>
-    </>
+    <FadeUp>
+      <div className={styles.wrap}>
+        <Title title="Like" />
+        <Carousel autoplay infinite>
+          {jojoImgs.map((item, index) => (
+            <div key={index}>
+              <img src={item} alt="" style={contentStyle} onClick={() => viewer.show(item)} />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </FadeUp>
   );
 };
 
