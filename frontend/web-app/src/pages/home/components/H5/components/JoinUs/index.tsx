@@ -1,6 +1,9 @@
 import React from "react";
 import Title from "../Title";
 import viewer from "@src/utils/viewer";
+import FadeUp from "@src/components/FadeUp";
+import FadeLeft from "@src/components/FadeLeft";
+import FadeRight from "@src/components/FadeRight";
 import styles from "./index.module.scss";
 
 const imgs = [
@@ -9,24 +12,38 @@ const imgs = [
 ];
 const JoinUs: React.FC = () => {
   return (
-    <div className={styles.wrap}>
-      <Title title="Join us" />
-      <p>
-        我们是<span style={{ color: "#e2007f" }}>JO极社</span>
-        <br />
-        这里，有一群志同道合的同伴
-        <br />
-        加入我们吧，让我们一起用我们的
-        <span style={{ color: "yellow" }}>【正义】</span>和<span style={{ color: "#e2007f" }}>【热情】</span>
-        <br />
-        度过我们的<span style={{ color: "yellow" }}>【黄金岁月】</span>
-      </p>
-      <div className={styles.imgs}>
-        {imgs.map((img, index) => (
-          <img key={index} src={img} alt="join us" onClick={() => viewer.show(img)} />
-        ))}
+    <FadeUp>
+      <div className={styles.wrap}>
+        <Title title="Join us" />
+        <p>
+          我们是<span style={{ color: "#e2007f" }}>JO极社</span>
+          <br />
+          这里，有一群志同道合的同伴
+          <br />
+          加入我们吧，让我们一起用我们的
+          <span style={{ color: "yellow" }}>【正义】</span>和
+          <span style={{ color: "#e2007f" }}>【热情】</span>
+          <br />
+          度过我们的<span style={{ color: "yellow" }}>【黄金岁月】</span>
+        </p>
+        <div className={styles.imgs}>
+          {imgs.map((img, index) => {
+            if (index === 0) {
+              return (
+                <FadeLeft key={index}>
+                  <img src={img} alt="join us" onClick={() => viewer.show(img)} />
+                </FadeLeft>
+              );
+            }
+            return (
+              <FadeRight key={index}>
+                <img src={img} alt="join us" onClick={() => viewer.show(img)} />
+              </FadeRight>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </FadeUp>
   );
 };
 

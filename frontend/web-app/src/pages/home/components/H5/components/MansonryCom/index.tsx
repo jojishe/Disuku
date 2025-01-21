@@ -2,6 +2,7 @@ import Masonry from "react-masonry-css";
 import Title from "../Title";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import viewer from "@src/utils/viewer";
+import FadeUp from "@src/components/FadeUp";
 import "./index.scss";
 const imgs = [
   "https://openres.xfyun.cn/xfyundoc/2025-01-21/09e1bcdd-aef8-47ee-b4ea-2ad89375784d/1737433341589/temp2.jpg",
@@ -22,20 +23,22 @@ const breakpointColumnsObj = {
 
 const MansonryCom = () => {
   return (
-    <>
-      <Title title="Cosplay Pics" />
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {imgs.map((item, index) => (
-          <div key={index}>
-            <LazyLoadImage src={item} alt={`Image ${index + 1}`} onClick={() => viewer.show(item)} />
-          </div>
-        ))}
-      </Masonry>
-    </>
+    <FadeUp>
+      <div className="mansonry-wrap">
+        <Title title="Cosplay Pics" />
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {imgs.map((item, index) => (
+            <div key={index}>
+              <LazyLoadImage src={item} alt={`Image ${index + 1}`} onClick={() => viewer.show(item)} />
+            </div>
+          ))}
+        </Masonry>
+      </div>
+    </FadeUp>
   );
 };
 
