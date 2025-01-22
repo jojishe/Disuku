@@ -1,6 +1,6 @@
 import Masonry from "react-masonry-css";
-import { useRequest } from "ahooks";
-import { fetchGet } from "@src/utils/fetch";
+// import { useRequest } from "ahooks";
+// import { fetchGet } from "@src/utils/fetch";
 import Title from "../Title";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import viewer from "@src/utils/viewer";
@@ -17,16 +17,16 @@ const breakpointColumnsObj = {
 };
 
 const MansonryCom = () => {
-  const { data, mutate } = useRequest(() => fetchGet("mansonry"), {
-    onError() {
-      console.error("mansonry error，使用MANSONRY_BACKUP");
-      mutate({ data: MANSONRY_BACKUP });
-      // Handle error appropriately
-    },
-    onSuccess(data) {
-      console.log("mansonry data ", data);
-    },
-  });
+  // const { data, mutate } = useRequest(() => fetchGet("mansonry"), {
+  //   onError() {
+  //     console.error("mansonry error，使用MANSONRY_BACKUP");
+  //     mutate({ data: MANSONRY_BACKUP });
+  //     // Handle error appropriately
+  //   },
+  //   onSuccess(data) {
+  //     console.log("mansonry data ", data);
+  //   },
+  // });
   return (
     <FadeUp>
       <div className="mansonry-wrap">
@@ -37,7 +37,7 @@ const MansonryCom = () => {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {data?.data?.map((item: string, index: number) => (
+            {MANSONRY_BACKUP.map((item: string, index: number) => (
               <div key={index}>
                 <LazyLoadImage
                   effect="blur"
