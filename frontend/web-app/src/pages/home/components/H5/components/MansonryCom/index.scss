@@ -35,3 +35,9 @@
   width: 100%;
   height: auto;
 }
+
+.mansonry-content {
+  max-height: 500px;
+  overflow: auto;
+  border-radius: 8px;
+}

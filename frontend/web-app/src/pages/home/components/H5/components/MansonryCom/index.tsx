@@ -13,6 +13,9 @@ const imgs = [
   "https://openres.xfyun.cn/xfyundoc/2025-01-21/81603a77-0f94-45e8-910c-5742ef65e23f/1737433341590/temp5.jpg",
   "https://openres.xfyun.cn/xfyundoc/2025-01-21/c65c9b86-a185-4d84-8c0a-0367b7b53c6c/1737451766793/ff239851822de9d9443578af2c44ca77.jpg",
   "https://openres.xfyun.cn/xfyundoc/2025-01-21/005529cc-8ef5-4b8f-af31-4d1e0803bff9/1737451793921/b891c188dfd12b030a806cf94cb04b7b_720.jpg",
+  "https://openres.xfyun.cn/xfyundoc/2025-01-21/005529cc-8ef5-4b8f-af31-4d1e0803bff9/1737451793921/b891c188dfd12b030a806cf94cb04b7b_720.jpg",
+  "https://openres.xfyun.cn/xfyundoc/2025-01-21/005529cc-8ef5-4b8f-af31-4d1e0803bff9/1737451793921/b891c188dfd12b030a806cf94cb04b7b_720.jpg",
+  "https://openres.xfyun.cn/xfyundoc/2025-01-21/005529cc-8ef5-4b8f-af31-4d1e0803bff9/1737451793921/b891c188dfd12b030a806cf94cb04b7b_720.jpg",
 ];
 const breakpointColumnsObj = {
   default: 4,
@@ -26,17 +29,19 @@ const MansonryCom = () => {
     <FadeUp>
       <div className="mansonry-wrap">
         <Title title="Cosplay Pics" />
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {imgs.map((item, index) => (
-            <div key={index}>
-              <LazyLoadImage src={item} alt={`Image ${index + 1}`} onClick={() => viewer.show(item)} />
-            </div>
-          ))}
-        </Masonry>
+        <div className="mansonry-content">
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {imgs.map((item, index) => (
+              <div key={index}>
+                <LazyLoadImage src={item} alt={`Image ${index + 1}`} onClick={() => viewer.show(item)} />
+              </div>
+            ))}
+          </Masonry>
+        </div>
       </div>
     </FadeUp>
   );
