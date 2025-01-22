@@ -1,4 +1,6 @@
 import Masonry from "react-masonry-css";
+import { useRequest } from "ahooks";
+import { fetchGet } from "@src/utils/fetch";
 import Title from "../Title";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import viewer from "@src/utils/viewer";
@@ -40,6 +42,16 @@ const breakpointColumnsObj = {
 };
 
 const MansonryCom = () => {
+  const { mutate } = useRequest(() => fetchGet("jojoimgs"), {
+    onError() {
+      console.error("jojoimgs error");
+      mutate(imgs);
+      // Handle error appropriately
+    },
+    onSuccess(data) {
+      console.log("jojoimgs data ", data);
+    },
+  });
   return (
     <FadeUp>
       <div className="mansonry-wrap">
