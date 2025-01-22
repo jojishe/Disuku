@@ -28,6 +28,7 @@ export const MANSONRY_BACKUP = [
   "https://openres.xfyun.cn/xfyundoc/2025-01-22/f5923c52-7e59-48d7-be5d-7355ac1583d7/1737534586039/IMG_20241204_110215%20%281%29.jpg",
   "https://openres.xfyun.cn/xfyundoc/2025-01-22/adba5798-2d47-400f-9cea-db67600879b5/1737534767347/0122_2%20%283%29.jpg",
   "https://openres.xfyun.cn/xfyundoc/2025-01-22/0857db8b-b8f4-4c95-90de-c388be4146c6/1737534767360/0122_1%20%283%29.jpg",
+  "https://jhwsxld6igbiz3ji.public.blob.vercel-storage.com/freecompress-Image_260375715539288-XxbYx6yDnMiu496ZL1Hb32QTL2tfTv.jpg",
 ];
 /** 轮播图backup */
 export const JOJO_IMG_BACKUP = [
