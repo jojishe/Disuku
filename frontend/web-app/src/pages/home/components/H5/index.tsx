@@ -4,7 +4,8 @@ import CarouselCom from "./components/CarouselCom";
 import MansonryCom from "./components/MansonryCom";
 import JoinUs from "./components/JoinUs";
 import Footer from "./components/Footer";
-import { Divider } from "antd";
+// import { Divider } from "antd";
+import Line from "./components/Line";
 import AOS from "aos";
 import { configResponsive, useResponsive } from "ahooks";
 
@@ -30,11 +31,11 @@ const H5 = () => {
       <div className={styles.content}>
         <Banner />
         <CarouselCom />
-        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
+        <Line />
         <MansonryCom />
-        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
+        <Line />
         <JoinUs />
-        <Divider style={{ borderColor: "#e2007f", margin: "2.5rem 0" }} />
+        <Line />
         <Footer />
       </div>
     </div>

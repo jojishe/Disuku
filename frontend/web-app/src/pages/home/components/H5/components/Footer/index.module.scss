@@ -1,42 +1,38 @@
 .joFooter {
+  position: relative;
   color: #ffffff;
-  padding: 20px;
+  // padding: 0 12px;
   padding-top: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); // 添加阴影
-}
 
-.joFooterContent {
-  margin-bottom: 10px;
-
-  p {
-    margin: 5px 0;
+  .bg {
+    position: absolute;
+    bottom: -8.1197916667vw;
+    left: -29.5572916667vw;
+    width: 54.296875vw;
+    height: 66.5364583333vw;
+    background: url("https://openres.xfyun.cn/xfyundoc/2025-01-22/9045c7ec-1a3f-409b-9d44-3b8a60b0845c/1737528910193/bg_kamen.webp")
+      no-repeat top center / contain;
+    -webkit-text-size-adjust: 100%;
+    z-index: -1;
   }
 
-  .email {
-    color: #f39c12;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+  .joFooterContent {
+    margin-bottom: 10px;
+
+    p {
+      margin: 5px 0;
+      line-height: 1.6;
     }
-  }
-}
 
-.joFooterLinks {
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s;
-
-    &:hover {
+    .email {
       color: #f39c12;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
-
-  span {
-    color: #ffffff;
-    margin: 0 5px;
   }
 }

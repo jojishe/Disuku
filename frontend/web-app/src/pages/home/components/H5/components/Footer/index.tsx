@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 const Footer: React.FC = () => {
   return (
     <footer className={styles.joFooter}>
+      <div className={styles.bg} />
       <div className={styles.joFooterContent}>
         <p>© 2025 JO极社 | 版权所有</p>
         <p>
@@ -15,13 +16,6 @@ const Footer: React.FC = () => {
           </a>
         </p>
       </div>
-      {/* <div className={styles.joFooterLinks}>
-        <a href="/about-us">关于我们</a>
-        <span>|</span>
-        <a href="/privacy-policy">隐私政策</a>
-        <span>|</span>
-        <a href="/terms-of-service">服务条款</a>
-      </div> */}
     </footer>
   );
 };

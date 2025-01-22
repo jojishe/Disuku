@@ -20,13 +20,13 @@
   /* change div to reference your elements you put in <Masonry> */
   // background: grey;
   margin-bottom: 4px;
-
+  border-radius: 8px;
   .ant-image-img {
     border-radius: 8px;
   }
 
-  > img {
-    max-width: 100%;
+  img {
+    width: 100%;
     border-radius: 8px;
   }
 }
@@ -34,4 +34,11 @@
 .mansonry-wrap {
   width: 100%;
   height: auto;
+}
+
+.mansonry-content {
+  max-height: 500px;
+  overflow: auto;
+  border-radius: 8px;
+  scroll-behavior: smooth;
 }
