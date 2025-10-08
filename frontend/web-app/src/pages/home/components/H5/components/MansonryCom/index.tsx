@@ -42,11 +42,12 @@ const MansonryCom = () => {
                 <LazyLoadImage
                   effect="blur"
                   wrapperProps={{
-                    style: { transitionDelay: "0.3s" },
+                    style: { transitionDelay: "0.5s" },
                   }}
                   src={item}
                   alt={`Image ${index + 1}`}
                   onClick={() => viewer.show(item)}
+                  threshold={300}
                 />
               </div>
             ))}
